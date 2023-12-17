@@ -1,0 +1,28 @@
+<div>
+  <label> id:</label> <input [(ngModel)]="employe.id">
+  <label> nom:</label> <input [(ngModel)]="employe.nom">
+  <label> prenom:</label> <input [(ngModel)]="employe.prenom">
+  <label> email:</label> <input [(ngModel)]="employe.email">
+</div>
+<p>le detail d'un employe</p>
+<ul>
+  <li>id:{{employe.id}}</li>
+  <li>nom:{{employe.nom}}</li>
+  <li>prenom:{{employe.prenom}}</li>
+  <li>email:{{employe.email}}</li>
+
+</ul>
+<button routerLink="/add"> Ajouter employe </button>
+<button [disabled]="etatEmp" (click)="modifierEmp()">
+  Modifier employe
+</button>
+
+<div>
+  <form (ngSubmit)="updateEmp()">
+    <label> Id : </label> <input [(ngModel)]="emp.id" name="id"> <br><br>
+    <label> Nom : </label> <input [(ngModel)]="emp.nom" name="nom"> <br><br>
+    <label> Prenom : </label> <input [(ngModel)]="emp.prenom" name="prenom"><br><br>
+    <label> Email :</label> <input [(ngModel)]="emp.adressMail" name="email"><br><br>
+    <button type="submit" >  Modifier </button>
+  </form>
+</div>
